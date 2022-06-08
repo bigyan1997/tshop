@@ -1,0 +1,246 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <!-- Hero Section Begin -->
+    <section class="hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="hero__categories">
+                        <div class="hero__categories__all">
+                            <i class="fa fa-bars"></i>
+                            <span>All Categories</span>
+                        </div>
+                        <ul>
+                            {% for category in links %}
+                            <li><a href="{{ category.get_url }}">{{ category.category_name }}</a></li>
+
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="hero__search">
+                        <div class="hero__search__form">
+                            <form action="{% url 'search' %}" method="GET">
+                                <input type="text" placeholder="What do yo u need?" name="keyword">
+                                <button type="submit" class="site-btn">SEARCH</button>
+                            </form>
+                        </div>
+                        <div class="hero__search__phone">
+                            <div class="hero__search__phone__icon">
+                                <i class="fa fa-phone"></i>
+                            </div>
+                            <div class="hero__search__phone__text">
+                                <h5>+65 11.188.888</h5>
+                                <span>support 24/7 time</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero__item set-bg" data-setbg="{% static './img/banner.png' %}">
+                        <div class="hero__text">
+                            <span>Tea Leaves</span>
+                            <h2>Tea Products <br />100% Organic</h2>
+                            <p>Free Pickup and Delivery Available</p>
+                            <a href="{% url 'store' %}" class="primary-btn">SHOP NOW</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Hero Section End -->
+    <!-- Categories Section Begin -->
+    <section class="categories">
+        <div class="container">
+            <div class="row">
+                <div class="categories__slider owl-carousel">
+                    {% for c in category%}
+                    <div class="col-lg-3">
+
+                        <div class="categories__item set-bg" data-setbg="{% if c.cat_image %}{{ c.cat_image.url }}{% else %}{% static './img/cat_image.png' %} {% endif %}">
+                            <h5><a href="{{c.get_url}}">{{c.category_name}}</a></h5>
+                        </div>
+
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Categories Section End -->
+<br>
+<section class="sale_off">
+        <div class="container">
+            <div class="section-title product__discount__title">
+                            <h2>Sale Off</h2>
+            </div>
+            <div class="row">
+                <div class="product__discount__slider owl-carousel">
+                    {% for product in sale %}
+                                <div class="col-lg-4">
+                                    <div class="product__discount__item">
+                                        <div class="product__discount__item__pic set-bg"
+                                            data-setbg="{{product.small_images.url}}">
+                                            <div class="product__discount__percent">On Sale</div>
+                                            <ul class="product__item__pic__hover">
+                                                <li><a href="{{product.get_url}}"><i class="fa fa-eye"></i></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="product__discount__item__text">
+                                            <span>{{product.category}}</span>
+                                            <h5><a href="#">{{product.product_name}}</a></h5>
+                                            <div class="product__item__price">$30.00 <span>${{product.price}}.00</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Categories Section End -->
+
+
+    <!-- Featured Section Begin -->
+    <section class="featured spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h2>Featured Product</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row featured__filter">
+                {% for product in featured %}
+                <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat">
+                    <div class="featured__item">
+                        <div class="featured__item__pic set-bg" data-setbg="{{product.small_images.url}}">
+
+                        </div>
+                        <div class="featured__item__text">
+                            <h6><a href="{{product.get_url}}">{{product.product_name}}</a></h6>
+                            <h5>${{product.price}}.00</h5>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="header__top__right__auth">
+                                <a href="{% url 'store' %}" class="site-btn"> View More</a>
+            </div>
+        </div>
+    </section>
+    <!-- Featured Section End -->
+
+    <!-- Banner Begin -->
+    <div class="banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="banner__pic">
+                        <img src="img/banner/banner-1.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="banner__pic">
+                        <img src="img/banner/banner-2.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Banner End -->
+
+    <!-- Latest Product Section Begin -->
+    <section class="latest-product spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="latest-product__text">
+                        <h4>Latest Products</h4>
+                        <div class="latest-product__slider owl-carousel">
+                            {% for product in new %}
+                            <div class="latest-prdouct__slider__item">
+
+                                <a href="{{product.get_url}}" class="latest-product__item">
+                                    <div class="latest-product__item__pic">
+                                        <img src="{{product.small_images.url}}" alt="">
+                                    </div>
+                                    <div class="latest-product__item__text">
+                                        <h6>{{product.product_name}}</h6>
+                                        <span>${{product.price}}.00</span>
+                                    </div>
+                                </a>
+
+
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="latest-product__text">
+                        <h4>Featured Products</h4>
+                        <div class="latest-product__slider owl-carousel">
+                            {% for product in featured %}
+                            <div class="latest-prdouct__slider__item">
+
+                                <a href="{{product.get_url}}" class="latest-product__item">
+                                    <div class="latest-product__item__pic">
+                                        <img src="{{product.small_images.url}}" alt="">
+                                    </div>
+                                    <div class="latest-product__item__text">
+                                        <h6>{{product.product_name}}</h6>
+                                        <span>${{product.price}}.00</span>
+                                    </div>
+                                </a>
+
+
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="latest-product__text">
+                        <h4>Products <span class="badge badge-pill badge-danger">On Sale</span></h4>
+                        <div class="latest-product__slider owl-carousel">
+                            {% for product in sale %}
+                            <div class="latest-prdouct__slider__item">
+
+                                <a href="{{product.get_url}}" class="latest-product__item">
+                                    <div class="latest-product__item__pic">
+                                        <img src="{{product.small_images.url}}" alt="">
+                                    </div>
+                                    <div class="latest-product__item__text">
+                                        <h6>{{product.product_name}}</h6>
+                                        <span>${{product.price}}.00</span>
+                                    </div>
+                                </a>
+
+
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Latest Product Section End -->
+
+
+
+
+
+
+</body>
+
+</html>
+
+{% endblock %}

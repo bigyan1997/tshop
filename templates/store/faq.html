@@ -1,0 +1,231 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+ <!-- Breadcrumb Section Begin -->
+    <section class="breadcrumb-section set-bg" data-setbg="{% static './img/breadcrumb.png' %}">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="breadcrumb__text">
+                        <h2>FAQ</h2>
+                        <div class="breadcrumb__option">
+                            <a href="/">Home</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Breadcrumb Section End -->
+
+<br>
+
+<section class="accordion-section clearfix mt-3" aria-label="Question Accordions">
+  <div class="container">
+    <div class="row">
+	<div class="col-md-3">
+		<!-- Contact us widget -->
+		<!--===================================================-->
+		<div class="mar-btm">
+			<h5 class="text-thin"><i class="fa fa-question-circle fa-lg fa-fw"></i> Can't find the answer? </h5>
+			<p class="text-muted mar-top">Send us an Email</p>
+			<a href="{% url 'contact' %}" class="site-btn">Contact us</a>
+		</div>
+		<!--===================================================-->
+
+	</div>
+	<div class="col-md-9">
+		<div class="panel">
+			<div class="panel-body">
+
+				<!-- GENERAL -->
+				<!--===================================================-->
+				<h3>General</h3>
+				<div id="demo-gen-faq" class="panel-group accordion">
+					<div class="bord-no pad-top">
+
+						<!-- Question -->
+						<div>
+							<a href="#demo-gen-faq1" data-toggle="collapse" data-parent="#demo-gen-faq">What is speciality Tea?</a>
+						</div>
+
+						<!-- Answer -->
+						<div id="demo-gen-faq1" class="collapse in">
+							<div class="pad-all">
+								All Tea comes from the plant camellia sinensis, and there are two primary varieties used in the preparation of the tea that we consume – Camellia Sinensis Sinensis or China Jaat, and Camellia Sinensis Assamica or Assam Jaat.
+
+There are also vegetatively propagated teas (or VP), which are clonal varieties bred to produce certain desired characteristics in the leaf. All teas are not equal, the location in which the tea is grown, the environmental conditions and the way in which the tea is produced all contribute to significant variation in leaf quality with respect to appearance, aroma, flavour and strength and health properties. Part of this is determined by the motivations of the person or company producing the tea as this will guide the approach to manufacture.
+							</div>
+						</div>
+					</div>
+					<div class="bord-no pad-top">
+
+						<!-- Question -->
+						<div class="text-semibold pad-hor text-lg">
+							<a href="#demo-gen-faq2" data-toggle="collapse" data-parent="#demo-gen-faq">What makes speciality tea different ?</a>
+						</div>
+
+						<!-- Answer -->
+						<div id="demo-gen-faq2" class="collapse in">
+							<div class="pad-all">
+								Specialty tea is leafy grade tea produced with the intention to enhance and fully express the characteristics present in the leaf. Specialty tea respects the diverse range of qualities, growing regions, climates, production and preparation methods as a means to create greater flavour and end user enjoyment.
+
+It tends toward a more artisan approach to manufacture as opposed to mass-production. In contrast, tea sold as a commodity is purchased as a homogeneous product, the objective of the production of which is to maximise yields and consistency for an acceptable standard of quality, to reduce costs and increase convenience in preference to the preservation of leaf characteristics and the celebration of seasonal variation.
+							</div>
+						</div>
+					</div>
+					<div class="bord-no pad-top">
+
+						<!-- Question -->
+						<div class="text-semibold pad-hor text-lg">
+							<a href="#demo-gen-faq3" data-toggle="collapse" data-parent="#demo-gen-faq">Does this tea require special water and/or temperature ?</a>
+						</div>
+
+						<!-- Answer -->
+						<div id="demo-gen-faq3" class="collapse">
+							<div class="pad-all">
+								As tea is approximately 99% water, the quality of the water will have a direct effect on the flavour and body of the tea produced. The water should be filtered with no taint from calcified or rusty water lines or chemicals like chlorine.
+
+If you intend on using tap water, it is imperative that the water is filtered. Tap water contains a variety of chlorides, sulphates and phosphates that are neither good for health nor tea quality. The only way to remove the dangerous chemicals such as fluoride and chloride from water in an efficient way is via reverse osmosis. However reverse osmosis also removes necessary minerals that provide the body and help to carry the tannins in the tea.
+
+Our trials with reverse osmosis found that TDS (Total Dissolved Solids) of between 75 and 120 offered the best balance to teas, with the optimum range being between 90 and 105. It was found that water with a TDS of less than 70 made the tea become very dry and gnawing on the palate, whilst TDS of 120 and above became very heavy on the palate and minerality began to dominate the palate. As a minimum, a double housed water filter should be used which removes taste and odour from 10 micron down to 1 micron.
+
+Avoid using water from your coffee machine as this is constantly re-boiled (deoxygenated) which can cause the tea to taste flat. It also has the possibility of being tainted with coffee or coffee machine cleaning agents. Removing large amounts of water from a coffee machine is also slow and may have a negative affect on your coffee. The boiler temperature might be reduced by the significant inflow of cold water into the boiler. A final concern is that many coffee machines expel a lot of steam through the water tap that can scold the tea leaves if the water is directed from the machine directly over the tea leaves.
+							</div>
+						</div>
+					</div>
+                    
+				</div>
+				<!--===================================================-->
+
+				<hr class="bord-no pad-all">
+
+				<!-- ACCOUNT -->
+				<!--===================================================-->
+				<h3 class="pad-all bord-btm text-thin">Account</h3>
+				<div id="demo-acc-faq" class="panel-group accordion">
+					<div class="panel panel-trans pad-top">
+
+						<!-- Question -->
+						<div class="text-semibold pad-hor text-lg">
+							<a href="#demo-acc-faq1" data-toggle="collapse" data-parent="#demo-acc-faq">Lorem ipsum dolor sit amet ?</a>
+						</div>
+
+
+						<!-- Answer -->
+						<div id="demo-acc-faq1" class="collapse in">
+							<div class="pad-all">
+								Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+							</div>
+						</div>
+					</div>
+					<div class="panel panel-trans pad-top">
+
+						<!-- Question -->
+						<div class="text-semibold pad-hor text-lg">
+							<a href="#demo-acc-faq2" data-toggle="collapse" data-parent="#demo-acc-faq">Consectetuer adipiscing elit ?</a>
+						</div>
+
+						<!-- Answer -->
+						<div id="demo-acc-faq2" class="collapse">
+							<div class="pad-all">
+								Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+							</div>
+						</div>
+					</div>
+					<div class="panel panel-trans pad-top">
+
+						<!-- Question -->
+						<div class="text-semibold pad-hor text-lg">
+							<a href="#demo-acc-faq3" data-toggle="collapse" data-parent="#demo-acc-faq">Sed diam nonummy nibh euismod tincidunt ?</a>
+						</div>
+
+						<!-- Answer -->
+						<div id="demo-acc-faq3" class="collapse">
+							<div class="pad-all">
+								Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--===================================================-->
+
+				<hr class="bord-no pad-all">
+
+				<!-- PAYMENT -->
+				<!--===================================================-->
+				<h3 class="pad-all bord-btm text-thin">Payment</h3>
+				<div id="demo-pym-faq" class="panel-group accordion">
+					<div class="bord-no pad-top">
+
+						<!-- Question -->
+						<div class="text-semibold pad-hor text-lg">
+							<a href="#demo-pym-faq1" data-toggle="collapse" data-parent="#demo-pym-faq">Lorem ipsum dolor sit amet ?</a>
+						</div>
+
+
+						<!-- Answer -->
+						<div id="demo-pym-faq1" class="collapse in">
+							<div class="pad-all">
+								Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+							</div>
+						</div>
+					</div>
+					<div class="bord-no pad-top">
+
+						<!-- Question -->
+						<div class="text-semibold pad-hor text-lg">
+							<a href="#demo-pym-faq2" data-toggle="collapse" data-parent="#demo-pym-faq">Consectetuer adipiscing elit ?</a>
+						</div>
+
+						<!-- Answer -->
+						<div id="demo-pym-faq2" class="collapse in">
+							<div class="pad-all">
+								Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+							</div>
+						</div>
+					</div>
+					<div class="bord-no pad-top">
+
+						<!-- Question -->
+						<div class="text-semibold pad-hor text-lg">
+							<a href="#demo-pym-faq3" data-toggle="collapse" data-parent="#demo-pym-faq">Sed diam nonummy nibh euismod tincidunt ?</a>
+						</div>
+
+
+						<!-- Answer -->
+						<div id="demo-pym-faq3" class="collapse in">
+							<div class="pad-all">
+								Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+							</div>
+						</div>
+					</div>
+					<div class="bord-no pad-top">
+
+						<!-- Question -->
+						<div class="text-semibold pad-hor text-lg">
+							<a href="#demo-pym-faq4" data-toggle="collapse" data-parent="#demo-pym-faq">Tincidunt ut laoreet dolore magna ?</a>
+						</div>
+
+
+						<!-- Answer -->
+						<div id="demo-pym-faq4" class="collapse in">
+							<div class="pad-all">
+								Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--===================================================-->
+
+			</div>
+		</div>
+	</div>
+</div>
+  </div>
+</section>
+
+
+{% endblock %}
